@@ -1,0 +1,48 @@
+div {
+	display: inline-block;
+}
+
+.venueInfo{
+	display: block;
+}
+
+.sidebar {
+	width: 29%;
+	height: 100%;
+	float: left;
+}
+
+.mapArea {
+	width: 70%;
+	height: 100%;
+}
+
+.title {
+	display: block;
+}
+
+.search-text {
+	width: 80%;
+}
+
+.venueImg {
+	width: 90%;
+	height: 50%;
+}
+
+.foursquareDiv{
+	padding-top: 30px;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 20px;
+	list-style-position: outside;
+	cursor: hand;
+}
+
+@media only screen and (max-width: 800px) {
+	.venueImg {
+		display: none;
+	}
+}

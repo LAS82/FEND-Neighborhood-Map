@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+		<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBQTiHkimJvfWeeEkw6e7nkJuk_rL7c4ZE'></script>
+		<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<div class="sidebar">
+			<input type="text" Placeholder="Type a venue" class="search-text" data-bind="textInput: textToFilter, valueUpdate: 'keyup'"/>
+
+			<ul data-bind="foreach: filteredVenues">
+				<li data-bind="text: name, click: $parent.listItemClick"></li>
+			</ul>
+			<hr />
+			<div>
+				<h3 class="teste" data-bind="text: venueName"></h3>
+				<label class="venueInfo" data-bind="text: venueLikes"></label>
+				<img class="venueInfo venueImg" data-bind="attr:{ src: venueImage }, visible: venueImage" >
+				<a class="venueInfo" data-bind="attr: { href: venueUrl}, visible: venueUrl" target="_blank">
+					Go to website
+				</a>
+			</div>
+			<div class="foursquareDiv">
+				<sup>Data recovered with Foursquare API</sup>
+			</div>
+		</div>
+		<div id="googleMap" class="mapArea"></div>
+	</body>
+</html>
