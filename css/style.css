@@ -27,7 +27,7 @@ div {
 
 .venueImg {
 	width: 90%;
-	height: 50%;
+	
 }
 
 .foursquareDiv{
@@ -39,10 +39,4 @@ ul {
 	padding-left: 20px;
 	list-style-position: outside;
 	cursor: hand;
-}
-
-@media only screen and (max-width: 800px) {
-	.venueImg {
-		display: none;
-	}
 }

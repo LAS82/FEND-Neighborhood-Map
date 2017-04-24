@@ -34,7 +34,7 @@ function loadApp(){
 		ko.applyBindings(vw);
 	}
 	catch(err) {
-		alert("Something went wrong while loading the Google Map. =-'(");
+		alert("Something went wrong while loading the app. =-'(");
 	}
 }
 
@@ -55,10 +55,12 @@ function createInfoWindowContent(venue) {
 	'<div>' +
 		'<h2>' + venue.name + '</h2>' +
 		'<h4>' + categories + '</h4>' +
-		'<hr />' +
+		'<hr>' +
 		'<div>' +
 			'<p>' + venue.location.formattedAddress[0] + ' - ' + venue.location.formattedAddress[1] + '</p>' +
 			'<p>' + venue.location.formattedAddress[2] + '</p>' +
+			'<br>' +
+			'<sup>Power by Foursquare API</sup>' +
 		'</div>' +
 	'</div>';
 
